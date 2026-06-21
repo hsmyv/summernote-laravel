@@ -25,12 +25,24 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    $('#{{ $editorId }}').summernote({
+$('#{{ $editorId }}').summernote({
     height: {{ $editorHeight }},
+    placeholder: @json(config('summernote.placeholder')),
+    dialogsInBody: @json(config('summernote.dialogs_in_body')),
+    dialogsFade: @json(config('summernote.dialogs_fade')),
+    disableDragAndDrop: @json(config('summernote.disable_drag_and_drop')),
+    shortcuts: @json(config('summernote.shortcuts')),
+    tabDisable: @json(config('summernote.tab_disable')),
+    addDefaultFonts: @json(config('summernote.add_default_fonts')),
     fontNames: @json(config('summernote.font_names')),
     fontNamesIgnoreCheck: @json(config('summernote.font_names_ignore_check')),
     fontSizes: @json(config('summernote.font_sizes')),
+    fontSizeUnits: @json(config('summernote.font_size_units')),
+    lineHeights: @json(config('summernote.line_heights')),
+    styleTags: @json(config('summernote.style_tags')),
     toolbar: @json(config('summernote.toolbar')),
+    codeviewFilter: @json(config('summernote.codeview_filter')),
+    codeviewIframeFilter: @json(config('summernote.codeview_iframe_filter')),
 });
 });
 </script>
